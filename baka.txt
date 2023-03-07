@@ -1,0 +1,656 @@
+
+body {
+  background-image: url('./assets/media/jwst.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Ubuntu:wght@300&display=swap');
+@import url('./status.css');
+@import url('./typed.css');
+@import url('./keyframes.css');
+
+
+#intro {
+  text-align: center;
+  color: #FC2BCE;
+  background-color: transparent;
+  font-size: 30px;
+  border-width: 0;
+  border-color: #000000;
+  border-bottom: 5px solid #C30EF3;
+}
+
+.cent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 0%;
+}
+
+#container {
+  margin: auto;
+  font-family: 'Ubuntu Mono', monospace;
+  border-width: 7%;
+  border-radius: 36px;
+  border-color: rgba(0, 0, 0, 0.4);
+  border-style: solid;
+  backdrop-filter: blur(30px);
+  background:
+    linear-gradient(80deg,
+      rgba(157, 39, 226, 0.20) 10%,
+      rgba(149, 12, 233, 0.20) 30%,
+      rgba(123, 38, 212, 0.20) 47%,
+      rgba(149, 69, 244, 0.20) 63%,
+      rgba(249, 1, 255, 0.47247388732708717) 84%);
+  padding: 10vh 36px;
+  width: 60%;
+  height: 48%;
+  max-width: 60%;
+  max-height: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.imgpfp {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 40%;
+  /* adjust as needed */
+  max-width: 150px;
+  /* adjust as needed */
+  height: auto;
+  max-height: 150px;
+}
+
+.soicalic {
+  border-color: transparent;
+  border-radius: 10px;
+  border-style: solid;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  width: 50px;
+  height: auto;
+  transform: translateY(5.2px);
+}
+
+.soicalic:hover {
+  background-color: transparent;
+  box-shadow: 0 5px #867;
+  transform: translateY(2.9px);
+}
+
+
+#about {
+  margin: 0 auto;
+  text-indent: 5px;
+  line-height: 1.6;
+  font-size: 23px;
+  border-color: #86778B;
+  border-radius: 10px;
+  border-width: 1.8px;
+  border-style: solid;
+  background-color: #191918;
+  max-width: 96%;
+  height: auto;
+}
+
+.tfs {
+  font-size: 40px;
+}
+
+
+.ts1 {
+  font-size: 40px;
+  text-shadow: 1.2px 2px #9D00FF;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .imgpfp {
+    max-width: 39%;
+    max-height: 39%;
+
+  }
+
+  .soicalic {
+    width: 29px;
+  }
+
+  #intro {
+    font-size: 15px;
+  }
+
+  #container {
+    @csize1: 68%;
+    width: @csize1;
+    max-width: @csize1;
+    height: 60%;
+    max-height: 60%;
+  }
+
+  #about {
+    font-size: 15px;
+    max-width: 89%;
+  }
+
+  .tfs {
+    font-size: 20px;
+  }
+
+  .ts1 {
+    font-size: 20px;
+    text-shadow: 1.2px 2px #AB34C7;
+  }
+}
+
+
+
+.ts3 {
+
+  font-size: 25px;
+  color: #0062FF;
+  text-shadow: 0.8px 1px #0062FF;
+
+}
+
+#about-font {
+  color: #E200FF;
+}
+
+.unc {
+  text-align: left;
+  display: block;
+}
+
+ubntu {
+  font-family: 'Ubuntu';
+  font-size: 19px;
+}
+
+a {
+
+  padding: 0;
+  margin: 0;
+  color: #0033cc;
+}
+
+li {
+  color: #FFFFF0;
+}
+
+line {
+  height: 1px;
+  border: 0;
+  background: black;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .soicalic {
+    width: 59px;
+  }
+
+.imgpfp {
+    width: 50%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+  #container {
+    width: 60%;
+    max-width: 60%;
+    height: 45%;
+    max-height: 45%;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .soicalic {
+    width: 60px;
+  }
+
+  #container {
+    width: 90%;
+    max-width: 90%;
+    height: 70%;
+    max-height: 70%;
+  }
+
+}
+
+
+#statsbar {
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  border-width: 0;
+  border-color: #000;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left-color: #000;
+  border-left: 5px solid;
+  background-color: #593B5B2B;
+  font-family: 'Fira Sans';
+  text-align: left;
+  padding: 10px;
+
+}
+
+.type:after {
+  font-size: 20px;
+  content: '_';
+  display: inline;
+  animation: blink 0.7s infinite;
+}
+
+.typed-cursor {
+  opacity: 0;
+  display: none;
+}
+
+import Typed from 'https://cdn.skypack.dev/typed.js';
+
+  var options = {
+    strings: ["That thing, it probably hasn't been discovered yet in the universe."],
+    typeSpeed: 30,
+    cursorChar: '_',
+    showCursor: false,
+    startDelay: 1200,
+    startDelay: 1200,
+    backSpeed: 20,
+    backDelay: 500,
+   
+
+  }
+
+  var typed = new Typed('#m', options);
+import { config } from './config.js';
+
+export function Randombg() {
+  var c = Math.floor(Math.random() * config.images.bg_list.length);
+  document.body.style.backgroundImage = "url(" + config.images.bg_list[c] + ")";  
+  
+};
+
+export function Staticbg() {
+  document.body.style.backgroundImage = "url(" + config.images.static_bg + ")";
+};
+
+const config = {
+  "random_bg": true,
+  "soical": {
+    "discord_url": "https://discord.com/users/829156179803504670",
+    "instagram_url": "#",
+    "facebook_url": "#",
+    "twitter_url": "https://twitter.com/Macdev_2008",
+    "youtube_url": "#"
+  },
+  "discord_id": 829156179803504670,
+  "discord_id_str": "829156179803504670",
+  "timezone": "Asia/Bangkok",
+  "images": {
+    "static_bg": "/assets/image/aridev.png",
+    "bg_list": [
+     "https://www.nasa.gov/sites/default/files/thumbnails/image/52489574532_dc6bc4a5f7_o.jpg",
+     "https://www.nasa.gov/sites/default/files/thumbnails/image/52503823645_68f1fc0f28_o.jpg"
+     , "https://www.nasa.gov/sites/default/files/thumbnails/image/iss068e041215.jpg",
+     "https://images-assets.nasa.gov/image/PIA20316/PIA20316~medium.jpg",
+     "https://images-assets.nasa.gov/image/PIA21440/PIA21440~orig.jpg", "https://images-assets.nasa.gov/image/PIA17036/PIA17036~orig.jpg", "https://images-assets.nasa.gov/image/PIA01480/PIA01480~medium.jpg", "https://images-assets.nasa.gov/image/PIA17036/PIA17036~orig.jpg", "https://images-assets.nasa.gov/image/PIA01483/PIA01483~medium.jpg"
+    ]
+  },
+  "data": {
+    "location_openweather": "Thailand, lop buri"
+  }
+}
+
+export { config }
+
+$.getScript("/src/site_config.js");
+const url = 'https://api.openweathermap.org/data/2.5/'
+const key = ''
+//const lat = 14.771008
+//const lon = 100.691651
+const loac = 'Thailand, lop buri'
+
+//get api as json
+$.ajax({
+  url: "https://api.lanyard.rest/v1/users/829156179803504670",
+  type: "get",
+  dataType: 'json',
+  error: function(data) { console.error("Hmmm, Looks like something went wrong."); },
+  success: function(data) {
+
+
+
+    const userdata = data;
+
+    //data extraction
+    var user = userdata["data"]["discord_user"];
+    //get user status(online, offline, dnd, idle)
+    var status = data["data"]["discord_status"];
+    //get user tag
+
+    var discriminator = data["data"]["discord_user"]["discriminator"];
+
+    //get username 
+    var username = data["data"]["discord_user"]["username"];
+    //  get user avatar ID
+    var avatar = data["data"]["discord_user"]["avatar"];
+    //get user ID
+    var id = data["data"]["discord_user"]["id"];
+    //insert to activities
+    var ac = data["data"]["activities"][0];
+
+    //convert arry to json dict
+
+    let con = Object.assign({}, ac);
+    //get status message 
+    var stat = con.state;
+    //if your status is empty (undefined)
+    console.log(stat);
+    if (stat == undefined) {
+      //set status to empty 
+      stat = "";
+    }
+
+    //-----------------------------------
+
+
+    //stringfy username 
+    let name1 = JSON.stringify(username);
+
+    let namef = JSON.parse(name1);
+
+    let dataformat = JSON.stringify(data);
+    console.dir(dataformat);
+
+
+    //avatar size ex:16 32 64 512 1024 4096
+    let size = "4096";
+
+    //convert to avatar url
+    let d_avatar = `https://cdn.discordapp.com/avatars/${id}/${avatar}.webp?size=${size}`;
+
+    //convert to discord url
+    var disurl = `https://discord.com/users/${id}`;
+
+
+    //format to discord username
+    var fullname = namef + "#" + discriminator;
+
+
+    //pfp image(automatically set pfp image)
+    document.getElementById("profile").innerHTML = `
+    
+      <a class="preimg" href="${d_avatar}" data-lightbox="pfp">
+        <img class="imgpfp" src="${d_avatar}" alt="pfp"/></a>
+           `;
+
+
+
+    //offline/online or dnd and idle status
+    document.getElementById("status").innerHTML = `
+    
+   <div class="status" id = "${status}"><ubntu>${status} on discord</ubntu></div> 
+   
+    `;
+    document.getElementById("username").innerHTML = `${fullname}`;
+
+
+    //soical icons
+    document.getElementById("soicals").innerHTML = `
+   <div class="soical">
+   
+        <a href="${config["discordurl"]}">
+          <img class="soicalic" src="icon/discord.svg"></a>
+          
+        <a href="${config["instagramurl"]}">
+          <img class="soicalic" src="icon/instagram.svg"></a>
+          
+        <a href="${config["facebookurl"]}">
+          <img class="soicalic" src="icon/facebook.svg"></a>
+          
+        <a href="${config["twitterurl"]}">
+          <img class="soicalic" src="icon/twitter.svg"></a>
+        <a href="${config["youtubeurl"]}">
+          <img class="soicalic" src="/icon/youtube.svg"></a></div>
+          `;
+
+    $.getJSON(`https://api.openweathermap.org/data/2.5/weather?q=${loac}&appid=${key}&units=metric`, function(data) {
+      $("#weather").html(`
+      
+    <span>${data.weather[0].description}</span> And ${Math.round(data.main.temp)}°C in ${data.name}, ${data.sys.country}`);
+
+      console.log(data)
+    });
+  }
+});
+
+import { config } from './config.js';
+import { Randombg, Staticbg } from './bg.js';
+import './render.js';
+
+//import mustache from 'https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js';
+if (config.random_bg == true) {
+  Randombg();
+}
+else {
+  Staticbg();
+};
+
+import Typed from 'https://cdn.skypack.dev/typed.js';
+import { createApp, reactive, toRefs } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
+import { config } from './config.js'
+const DateTime = luxon.DateTime;
+
+
+const app = reactive({
+  about: `<div id="about" class="">
+  <div id="intro">
+
+    <Hi I'm mac
+      <br>
+      Just normal person with a lot of curiousity
+   <br><small>i don't know how can i get here💀
+    </small>
+  </div>
+          <h3 id="about-font">About-me</h3>
+          <li>Nickname: Mac</li>
+          <li>Age: 14 ~ 16 </li>
+          <li>MBTI: ENFP </li>
+          <li>Status: Don't mess with my life </li>
+          <li>Favorite: Codeing, science, space, astro, tech</li>
+          <li>Education: non-formal education</li>
+          <br>
+          <br>           
+          </div>
+          `,
+  soical_ic: `
+     <div class="soical" style="text-align: center; align-items: center;">
+          <a href="${config.soical.discord_url}">
+            <img class="soicalic" src="./assets/icon/discord.svg"></a>
+          <a href="${config.soical.instagram_url}">
+            <img class="soicalic" src="./assets/icon/instagram.svg"></a>
+          <a href="${config.soical.facebook_url}">
+            <img class="soicalic" src="./assets/icon/facebook.svg"></a>
+          <a href="${config.soical.twitter_url}">
+            <img class="soicalic" src="./assets/icon/twitter.svg"></a>
+          <a href="${config.soical.youtube_url}">
+                    <img class="soicalic" src="./assets/icon/youtube.svg"></a></div>
+             <br>
+            <br>`,
+  time: '',
+  wt: ''
+});
+
+const App = {
+  setup() {
+    return toRefs(app);
+
+  },
+  template: `
+    <div id="#statsbar" style='font-size: 1px;'>
+    My time: <span v-html="time"></span><br>
+    Weather: <span v-html="wt"></span>
+    </div>
+    <div id="container">
+      <div><img class="imgpfp" src="https://api.lanyard.rest/829156179803504670.png"><br></div>
+      <div style="text-align: center" class="type"> <span id="typeingname"></span></div>
+      <br>
+      <div id="status">
+      </div>
+      
+       <br>
+     
+        <div v-html="about"></div>
+        <br>
+        <div v-html="soical_ic"></div>
+      </div>`
+};
+
+createApp(App).mount('#app');
+
+
+
+
+
+function time() {
+  const dt = DateTime.now();
+  let t = dt.toFormat('ff:ss ZZZZ', { zone: config.timezone })
+  app.time = t;
+}
+setInterval(() => time(), 1000);
+
+fetch('https://wttr.in/Thailand Lop Buri?format=%t in %l, Wind speed %w, %m')
+  .then(response => response.text())
+  .then(data => recv(data));
+
+function recv(data) {
+  app.wt = data;
+}
+
+lanyard({
+  userId: config.discord_id_str,
+  socket: true,
+  onPresenceUpdate: recvl
+})
+
+function recvl(data) {
+  console.log()
+
+  function shuffle(o) {
+    let r = o.length,
+      e;
+    for (; 0 != r;) e = Math.floor(Math.random() * r), r--, [o[r], o[e]] = [o[e], o[r]];
+    return o
+  }
+
+  function d(num) { var digits = num.toString().split(''); var realDigits = digits.map(Number); return realDigits; }
+  var realtag = data.discord_user.discriminator;
+  var tagsh = shuffle(d(realtag));
+  var mixedTag = parseInt(tagsh.join(''));
+  var name = data.discord_user.username || '';
+  var nameLetters = name.split('');
+  var shname = shuffle(nameLetters).join('');
+  var options = { strings: [`<span class="tfs">${shname}#${mixedTag}<span>`, `<span class="tfs">${name}#${mixedTag}<span>`, `<span class="tfs">${name}#${realtag}<span>`, `<span class="ts1">${name}#${realtag}</span>`], typeSpeed: 30, cursorChar: '_', showCursor: false, startDelay: 1200, backSpeed: 20, backDelay: 500, }
+  var typed = new Typed('#typeingname', options);
+}
+/*
+
+
+
+const app = createApp({
+  data() {
+    return {
+      about: about,
+      soical_ic: `
+           `,
+      stat: '',
+      
+      skills: `
+          <img id="skill" src="./assets/icon/skill.svg"></a></div>
+      `
+    }
+  }
+})
+
+
+app.mount('#app');
+app.stat = "shit";
+*/
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>where is line 26?</title>
+  
+  <link rel="author" href="humans.txt" />
+
+  <meta name="description" content="An ordinary kid who wants to change society but cannot. :(">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:site_name" content="Look again at that dot.">
+  <meta property="og:url" content="https://palebluedot.tk">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mac">
+  <meta property="og:description" content="An ordinary kid who wants to change society but cannot. :(">
+  <meta property="og:image" content="banner.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="https://palebluedot.tk">
+  <meta property="twitter:url" content="https://palebluedot.tk">
+  <meta name="twitter:title" content="Mac">
+  <meta name="twitter:description" content="An ordinary kid who wants to change society but cannot. :(">
+  <meta name="twitter:image" content="banner.png">
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/gh/xaronnn/js-lanyard/lanyard.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.2.1/luxon.min.js"></script>
+  <link rel='stylesheet/less' type='text/css' href='/assets/css/main.less'>
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+<html>
+
+<body>
+
+  <div id="app"></div>
+</body>
+<script type="module" src="/assets/js/index.js"></script>
+
+</html>
+

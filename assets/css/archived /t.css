@@ -1,0 +1,108 @@
+/* styles for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  #container {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .imgpfp {
+    width: 50%;
+    max-width: 50%;
+  }
+
+  #about {
+    font-size: 18px;
+  }
+}
+
+/* styles for screens between 768px and 1200px */
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  #container {
+    width: 80%;
+    max-width: 80%;
+  }
+
+  .imgpfp {
+    width: 45%;
+    max-width: 45%;
+  }
+
+  #about {
+    font-size: 20px;
+  }
+}
+
+/* styles for screens larger than 1200px */
+@media only screen and (min-width: 1200px) {
+  #container {
+    width: 60%;
+    max-width: 60%;
+  }
+
+  .imgpfp {
+    width: 39%;
+    max-width: 39%;
+  }
+
+  #about {
+    font-size: 23px;
+  }
+}
+
+#intro {
+  color: #FC2BCE;
+  background-color: transparent;
+  font-size: 30px;
+  border-width: 0;
+  border-color: #000000;
+  border-bottom: 5px solid #C30EF3;
+}
+
+.cent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 0%;
+}
+
+#container {
+  margin: auto;
+  font-family: 'Ubuntu Mono', monospace;
+  border-width: 7%;
+  border-radius: 36px;
+  border-color: rgba(0, 0, 0, 0.4);
+  border-style: solid;
+  backdrop-filter: blur(30px);
+  background:
+    linear-gradient(80deg,
+      rgba(157, 39, 226, 0.20) 10%,
+      rgba(149, 12, 233, 0.20) 30%,
+      rgba(123, 38, 212, 0.20) 47%,
+      rgba(149, 69, 244, 0.20) 63%,
+      rgba(249, 1, 255, 0.47247388732708717) 84%);
+  padding: 10vh 36px;
+  width: 60%;
+  height: 48%;
+  max-width: 60%;
+  max-height: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-5050%);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.imgpfp {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 39%;
+  height: 39%;
+  max-width: 39%;
+  max-height: 39%;
+}

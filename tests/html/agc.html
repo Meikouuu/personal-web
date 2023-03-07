@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Age and Next Birthday Countdown</title>
+  </head>
+  <body>
+    <div id="countdown"></div>
+    <script>
+      // Given date of birth
+      var birthDay = 3;
+      var birthMonth = 4; // April
+      var birthYear = 2002;
+
+      // Today's date
+      var today = new Date();
+      today.setHours(today.getHours() + 7);
+      today.setHours(15);
+      today.setMinutes(0);
+      var currentDay = today.getDate();
+      var currentMonth = today.getMonth() + 1; // January is 0
+      var currentYear = today.getFullYear();
+
+      // Calculate age
+      var age = currentYear - birthYear;
+      if (currentMonth < birthMonth || (currentMonth == birthMonth && currentDay < birthDay)) {
+          age--;
+      }
+
+      // Next birthday
+      var nextBirthday;
+      if (currentMonth > birthMonth || (currentMonth == birthMonth && currentDay >= birthDay)) {
+          nextBirthday = new Date(currentYear + 1, birthMonth - 1, birthDay);
+      } else {
+          nextBirthday = new Date(currentYear, birthMonth - 1, birthDay);
+      }
+
+      console.log("Age: " + age);
+      console.log("Next birthday: " + nextBirthday);
+
+      // Calculate time remaining until next birthday
+      var countdownInterval = setInterval(function () {
+        var timeRemaining = nextBirthday - new Date();
+        if (timeRemaining <= 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("countdown").innerHTML = "Happy birthday!";
+        } else {
+          var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+          document.getElementById("countdown").innerHTML = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
+</body>
+
+</html>

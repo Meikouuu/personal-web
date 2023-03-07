@@ -1,0 +1,40 @@
+  _   _                                 _______  _______ 
+ | | | |_   _ _ __ ___   __ _ _ __  ___|_   _\ \/ /_   _|
+ | |_| | | | | '_ ` _ \ / _` | '_ \/ __| | |  \  /  | |  
+ |  _  | |_| | | | | | | (_| | | | \__ \_| |  /  \  | |  
+ |_| |_|\__,_|_| |_| |_|\__,_|_| |_|___(_)_| /_/\_\ |_|  
+/* Humans.TXT */
+
+
+
+
+/* TEAM */
+Site: Mac's portfolio 
+Author: Mac
+Location: Lopburi, Thailand
+License: MIT
+
+
+
+/* INSPIRATION */
+codeing insp: FuseMcDev/Fusedev
+
+  						
+
+/* SITE */
+
+Standards: HTML5, CSS3, ECMAscript, etc
+Components: jQuery, LightBox, lesscss, vuejs, etc
+Software: for personal use but free to copy
+Last update: 2023/1/15 23:56
+Update(4): 2023/2/8 22:00
+
+
+
+
+Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious.
+
+-Stephen Hawking-
+
+
+remember: ไม่มีอะไรแสดงความโง่เขลาของพวกเราได้มากกว่าภาพที่ถ่ายจากระยะทาง 6พันล้านกิโลเมตรแล้ว

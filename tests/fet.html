@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+
+</body>
+<script>
+  function status(status = null, status_message = 'unknow') {
+    switch (status) {
+      case 'online':
+        status_message = 'Online';
+        break;
+      case 'offline':
+        status_message = 'Offline';
+        break;
+      case 'dnd':
+        status_message = 'Do not disturb';
+        break;
+      case 'streaming':
+        status_message = 'Streaming';
+        break;
+      default:
+        console.error(`What the fuck is this shit?`);
+    }
+    return status_message;
+  }
+
+  console.log(status(status = 'dnd'));
+</script>
+
+</html>

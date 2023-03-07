@@ -1,0 +1,25 @@
+c    Weather condition,
+    C    Weather condition textual name,
+    x    Weather condition, plain-text symbol,
+    h    Humidity,
+    t    Temperature (Actual),
+    f    Temperature (Feels Like),
+    w    Wind,
+    l    Location,
+    m    Moon phase 🌑🌒🌓🌔🌕🌖🌗🌘,
+    M    Moon day,
+    p    Precipitation (mm/3 hours),
+    P    Pressure (hPa),
+    u    UV index (1-12),
+
+    D    Dawn*,
+    S    Sunrise*,
+    z    Zenith*,
+    s    Sunset*,
+    d    Dusk*,
+    T    Current time*,
+    Z    Local timezone.
+
+(*times are shown in the local timezone)
+
+https://wttr.in/thailand+lop+buri?format="%t feel like %f in %l, Wind speed %w, %m"
