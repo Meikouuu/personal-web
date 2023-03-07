@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Ubuntu:wght@300&display=swap');
+
+
+.status {
+  background-color: #00000000
+}
+
+#offline {
+  color: #6e7985;
+}
+
+#online {
+  color: #43b581;
+}
+
+#idle {
+  color: #faa61a;
+}
+
+#dnd {
+  color: #f04747;
+}
+
+
+#about-font {
+  color: #E200FF;
+}
+
+#intro {
+  color: #FC2BCE;
+  background-color: transparent;
+  font-size: 30px;
+  border-width: 0;
+  border-color: #000000;
+  border-bottom: 5px solid #C30EF3;
+}
+
+
+
+#dstats {
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  font-size: 15px;
+  border-width: 0;
+  border-color: #000000;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left-color: 1px;
+  border-left: 5px solid;
+  background-color: #593B5B2B;
+  font-family: 'Fira Sans';
+  text-align: left;
+  padding: 10px;
+}
+
+
+
+cent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 0%;
+}
+
+
+body {
+
+  /*background-image: url(); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  font-family: "System-UI", sans-serif;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  scroll-behavior: smooth;
+
+}
+
+main {
+  font-family: 'Ubuntu Mono', monospace;
+  border-width: 7%;
+  border-radius: 36px;
+  border-color: rgba(0, 0, 0, 0.4);
+  border-style: solid;
+  backdrop-filter: blur(30px);
+  background:
+    linear-gradient(80deg,
+      rgba(157, 39, 226, 0.20) 10%,
+      rgba(149, 12, 233, 0.20) 30%,
+      rgba(123, 38, 212, 0.20) 47%,
+      rgba(149, 69, 244, 0.20) 63%,
+      rgba(249, 1, 255, 0.47247388732708717) 84%);
+  /*background: #93299B47;*/
+  padding: 10vh 36px;
+  width: 60%;
+  height: 48%;
+  max-width: 60%;
+  max-height: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* avatar*/
+.imgpfp {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 39%;
+  height: 39%;
+  max-width: 39%;
+  max-height: 39%;
+}
+
+/*soical-media icon*/
+.soicalic {
+  border-color: transparent;
+  border-radius: 10px;
+  border-style: solid;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  width: 50px;
+  height: auto;
+  transform: translateY(5.2px);
+}
+
+.soicalic:hover {
+  background-color: transparent;
+  box-shadow: 0 5px #867;
+  transform: translateY(2.9px);
+}
+
+/*about text content div*/
+#about {
+  text-indent: 5px;
+  line-height: 1.6;
+  font-size: 23px;
+  border-color: #86778B;
+  border-radius: 10px;
+  border-width: 1.8px;
+  border-style: solid;
+  background-color: #191918;
+  max-width: 96%;
+  height: auto;
+}
+
+
+.ts1 {
+
+  font-size: 40px;
+  color: #9D00FF;
+  text-shadow: 1.2px 2px #9D00FF;
+}
+
+.ts3 {
+  font-size: 25px;
+  color: #0062FF;
+  text-shadow: 0.8px 1px #0062FF;
+
+}
+
+.unc {
+  text-align: left;
+  display: block;
+}
+
+ubntu {
+  font-family: 'Ubuntu';
+  font-size: 19px;
+}
+
+a {
+  color: #0033cc;
+}
+
+li {
+  color: #FFFFF0;
+}
+
+line {
+  height: 1px;
+  border: 0;
+  background: black;
+}@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Ubuntu:wght@300&display=swap');
+
+
+.status {
+  background-color: #00000000
+}
+
+#offline {
+  color: #6e7985;
+}
+
+#online {
+  color: #43b581;
+}
+
+#idle {
+  color: #faa61a;
+}
+
+#dnd {
+  color: #f04747;
+}
+
+
+#about-font {
+  color: #E200FF;
+}
+
+#intro {
+  color: #FC2BCE;
+  background-color: transparent;
+  font-size: 30px;
+  border-width: 0;
+  border-color: #000000;
+  border-bottom: 5px solid #C30EF3;
+}
+
+
+
+#dstats {
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  font-size: 15px;
+  border-width: 0;
+  border-color: #000000;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left-color: 1px;
+  border-left: 5px solid;
+  background-color: #593B5B2B;
+  font-family: 'Fira Sans';
+  text-align: left;
+  padding: 10px;
+}
+
+
+
+cent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 0%;
+}
+
+
+body {
+
+  /*background-image: url(); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  font-family: "System-UI", sans-serif;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  scroll-behavior: smooth;
+
+}
+
+main {
+  font-family: 'Ubuntu Mono', monospace;
+  border-width: 7%;
+  border-radius: 36px;
+  border-color: rgba(0, 0, 0, 0.4);
+  border-style: solid;
+  backdrop-filter: blur(30px);
+  background:
+    linear-gradient(80deg,
+      rgba(157, 39, 226, 0.20) 10%,
+      rgba(149, 12, 233, 0.20) 30%,
+      rgba(123, 38, 212, 0.20) 47%,
+      rgba(149, 69, 244, 0.20) 63%,
+      rgba(249, 1, 255, 0.47247388732708717) 84%);
+  /*background: #93299B47;*/
+  padding: 10vh 36px;
+  width: 60%;
+  height: 48%;
+  max-width: 60%;
+  max-height: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* avatar*/
+.imgpfp {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 39%;
+  height: 39%;
+  max-width: 39%;
+  max-height: 39%;
+}
+
+/*soical-media icon*/
+.soicalic {
+  border-color: transparent;
+  border-radius: 10px;
+  border-style: solid;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  width: 50px;
+  height: auto;
+  transform: translateY(5.2px);
+}
+
+.soicalic:hover {
+  background-color: transparent;
+  box-shadow: 0 5px #867;
+  transform: translateY(2.9px);
+}
+
+/*about text content div*/
+#about {
+  text-indent: 5px;
+  line-height: 1.6;
+  font-size: 23px;
+  border-color: #86778B;
+  border-radius: 10px;
+  border-width: 1.8px;
+  border-style: solid;
+  background-color: #191918;
+  max-width: 96%;
+  height: auto;
+}
+
+
+.ts1 {
+
+  font-size: 40px;
+  color: #9D00FF;
+  text-shadow: 1.2px 2px #9D00FF;
+}
+
+.ts3 {
+  font-size: 25px;
+  color: #0062FF;
+  text-shadow: 0.8px 1px #0062FF;
+
+}
+
+.unc {
+  text-align: left;
+  display: block;
+}
+
+ubntu {
+  font-family: 'Ubuntu';
+  font-size: 19px;
+}
+
+a {
+  color: #0033cc;
+}
+
+li {
+  color: #FFFFF0;
+}
+
+line {
+  height: 1px;
+  border: 0;
+  background: black;
+}

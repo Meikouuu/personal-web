@@ -1,0 +1,19 @@
+
+
+#statsbar {
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  border-width: 0;
+  border-color: #000;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left-color: #000;
+  border-left: 5px solid;
+  background-color: #593B5B2B;
+  font-family: 'Fira Sans';
+  text-align: left;
+  padding: 10px;
+
+}
+
